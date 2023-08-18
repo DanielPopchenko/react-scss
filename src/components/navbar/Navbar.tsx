@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/Navbar.scss';
+// import '../../styles/components/Navbar.scss';
 
 const Navbar = () => {
   return (

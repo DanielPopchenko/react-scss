@@ -1,0 +1,4 @@
+@import '../utils/Variables.scss';
+.main-btn {
+    @include buttonStyles();
+}

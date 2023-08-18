@@ -1,0 +1,62 @@
+@import '../utils/Variables.scss';
+.input {
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #727171;
+    color: #fff;
+    &:focus {
+        outline: 1px solid map-get($colors, 'tealColor');
+    }
+    &::placeholder {
+        color: map-get($colors, 'text');
+    }
+}
+
+.btn {
+    // !  @include - вызывает mixin
+    @include buttonStyles();
+}
+
+.red-btn {
+    @extend .btn;
+    background-color: red;
+}
+
+.green-btn {
+    @extend .btn;
+    background-color: green;
+}
+
+.blue-btn {
+    @extend .btn;
+    background-color: blue;
+}
+
+// ! Шаблон - placeholder - самого шаблона не будет в рещультирующем файле,
+%box {
+    display: block;
+    width: 50px;
+    height: 50px;
+    // background-color: rgb(247, 219, 39);
+    margin-top: 30px;
+    border: 2px solid black;
+}
+
+// ! в .box  просто затянутся его стили
+.box {
+    @extend %box;
+    .yellow {
+        height: 50%;
+        width: 100%;
+        background-color: rgb(247, 219, 39);
+    }
+    .blue {
+        height: 50%;
+        width: 100%;
+        background-color: rgb(38, 38, 238);
+    }
+}

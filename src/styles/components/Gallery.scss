@@ -1,0 +1,19 @@
+.gallery {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    @each $animal in bird,
+    dog,
+    wolf {
+        .#{$animal}-icon {
+            width: 100px;
+            height: 100px;
+            background-image: url('../../images/#{$animal}.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}

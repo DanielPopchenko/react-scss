@@ -1,0 +1,21 @@
+// utils
+@import './utils/Variables.scss';
+@import './utils/colors.scss';
+// components
+@import './components/Container.scss';
+@import './components/Form.scss';
+@import './components/MainPage.scss';
+@import './components/Navbar.scss';
+@import './components/Gallery.scss';
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: getColor('text');
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 19px;
+    background-color: getColor('background');
+    width: 100%;
+}

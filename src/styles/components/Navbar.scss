@@ -1,23 +1,25 @@
-@import './Variables.scss';
+@import '../utils/Variables.scss';
+@import '../utils/colors';
 .navbar {
     display: flex;
     align-items: center;
     justify-content: end;
     width: 100%;
     height: 80px;
-    background-color: $tealColor;
-    border-radius: 3px;
+    background-color: map-get($colors, 'tealColor');
+    border-radius: 2px;
+    @include bordered(tomato);
     // ! We can nest our tags styles
     a {
         cursor: pointer;
         text-decoration: none;
         font-size: 21px;
-        color: $whiteColor;
+        color: map-get($colors, 'text');
         margin: 10px;
         transition: all 0.2s;
     }
     a:hover {
-        color: $hoverColor;
+        color: map-get($colors, 'hover');
     }
 }
 

@@ -1,0 +1,55 @@
+// ! Вложенность
+// ? пример кода css
+// .section {
+//   width: 100%;
+// }
+// .section .title {
+//   color: red;
+// }
+// .section .text {
+//   font-size: 14px;
+// }
+// ? пример кода scss
+// .section {
+//   width: 100%;
+//   .title {
+//     color: red;
+//   }
+//   .text {
+//     font-size: 14px;
+//   }
+// }
+// -------------
+// -------------
+// ! variables - так же как и в js имеют свой скоуп
+// colors
+// $tealColor: rgb(100, 148, 105);
+// $whiteColor: #fff;
+// $hoverColor: #00000096;
+// ! -------------
+// ! -------------
+@import './colors';
+// ! mix in
+@mixin buttonStyles {
+    cursor: pointer;
+    display: block;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: map-get($colors, 'tealColor');
+    color: map-get($colors, 'text');
+    margin-top: 20px;
+    transition: all 0.2s;
+    font-size: 18px;
+    // ! & = елемент к которому обращаемся
+    &:hover {
+        background-color: map-get($colors, 'hover');
+        color: map-get($colors, 'text');
+    }
+}
+
+@mixin bordered($color) {
+    border-top: 2px solid $color;
+    border-bottom: 2px solid $color;
+}

@@ -1,0 +1,4 @@
+$colors: ( 'background': #7b7fc2, 'text': #fff, 'tealColor': teal, 'hover': #cc00ff, );
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
